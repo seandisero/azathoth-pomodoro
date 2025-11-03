@@ -1,8 +1,6 @@
 package main
 
-import (
-	"azathoth"
-)
+import "github.com/seandisero/azathoth-pomodoro"
 
 func main() {
 	azathoth := azathoth.NewAzathoth(azathoth.WithDefaultConfig())
