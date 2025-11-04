@@ -116,14 +116,14 @@ func (a *Azathoth) Start() {
 			<-a.nextInterval
 			if a.state == WORK {
 				a.intervalCount++
-				a.prevState = WORK
+				a.prevState = REST
 				a.state = REST
 			}
 		case REST:
 			go a.countDown(a.restTime())
 			<-a.nextInterval
 			if a.state == REST {
-				a.prevState = REST
+				a.prevState = WORK
 				a.state = WORK
 			}
 		case PAUSE:
